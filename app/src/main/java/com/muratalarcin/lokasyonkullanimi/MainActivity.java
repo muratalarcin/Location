@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding.buttonKonum.setOnClickListener(view -> {
             izinKontrol = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);//manifest seçerken android seç
-            if (izinKontrol != PackageManager.PERMISSION_GRANTED) {//izin onaylanırsa
+            if (izinKontrol == PackageManager.PERMISSION_GRANTED) {//izin onaylanırsa
 
             }else {//onaylanmazsa
                 ActivityCompat.requestPermissions(this,
